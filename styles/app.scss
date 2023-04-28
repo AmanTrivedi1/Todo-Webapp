@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+$maincolor: #000000;
+$textcolorwhite: #f6f1e9;
+$textcolorgreen: #41644a;
+$gradientcolor: rgb(24, 90, 189);
+// background: radial-gradient(circle, rgba(24,90,189,1) 0%, rgba(42,137,230,1) 100%);
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  color: $textcolorwhite;
+}
+body {
+  background-color: $maincolor;
+}
+a {
+  color: $textcolorwhite;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  > div {
+    > img {
+      max-width: 40px;
+    }
+  }
+  padding: 0.6rem 0.8rem;
+  background-color: $maincolor;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 400;
+  article {
+    > a {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+.Logo {
+  color: rgb(24, 90, 189);
+}
+.login__btn {
+  background: radial-gradient(
+    circle,
+    rgba(24, 90, 189, 1) 0%,
+    rgba(42, 137, 230, 1) 100%
+  );
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid rgb(24, 90, 189);
+}
+///////////////////////////////////////Login Form & Signup form ///////////////
+.login {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  > section {
+    backdrop-filter: blur(13px) saturate(200%);
+    width: 18rem;
+    -webkit-backdrop-filter: blur(13px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.58);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    > form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: baseline;
+      padding: 2rem 2rem;
+      > input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        color: $maincolor;
+        background-color: $textcolorwhite;
+
+        height: 2.3rem;
+        border-radius: 5px;
+        border: none;
+        padding: 0.2rem 0.4rem;
+        &:focus {
+          outline: none !important;
+          border-color: rgb(24, 90, 189);
+          box-shadow: 0 0 10px rgb(24, 90, 189);
+        }
+      }
+      > a {
+        font-size: 12px;
+      }
+      > p {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+      > button {
+        background: radial-gradient(
+          circle,
+          rgba(24, 90, 189, 1) 0%,
+          rgba(42, 137, 230, 1) 100%
+        );
+        border: none;
+        padding: 0.4rem 0.8rem;
+        font: 14px;
+        border-radius: 5px;
+        margin-top: 5px;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.todoform {
+  max-width: 40rem;
+  padding: 1rem 1rem;
+  -webkit-backdrop-filter: blur(13px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.58);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  > section {
+    padding: 0.6rem 0.8rem;
+    border-radius: 5px;
+    > form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.6rem 0.6rem;
+      > input {
+        width: 25rem;
+        background-color: $textcolorwhite;
+        padding: 0.8rem 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+        color: $maincolor;
+        margin: 1rem;
+        border: none;
+        height: 2rem;
+        &:focus {
+          outline: none !important;
+          border-color: rgb(24, 90, 189);
+          box-shadow: 0 0 10px rgb(24, 90, 189);
+        }
+      }
+      > button {
+        width: 25rem;
+        border: none;
+        font-size: 1rem;
+        background: radial-gradient(
+          circle,
+          rgba(24, 90, 189, 1) 0%,
+          rgba(42, 137, 230, 1) 100%
+        );
+        border-radius: 5px;
+        padding: 0.2rem 0.6rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .todoform {
+    max-width: 30rem;
+    > section {
+      > form {
+        > input {
+          width: 20rem;
+        }
+        > button {
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .todoform {
+    max-width: 25rem;
+    > section {
+      > form {
+        > input {
+          width: 100%;
+        }
+        > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .todoform {
+    max-width: 18rem;
+    > section {
+      > form {
+        > input {
+          width: 100%;
+        }
+        > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+///////////////////////////////// Todo Items  Listing Designs///////////////////////////
+.todo {
+  max-width: 30rem;
+  padding: 1rem 1rem;
+  overflow: scroll;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: $maincolor;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  > div {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+}
+// cLIENT sIDE cSS
+
+.clientbtn {
+  border: none;
+  background: radial-gradient(
+    circle,
+    rgba(24, 90, 189, 1) 0%,
+    rgba(42, 137, 230, 1) 100%
+  );
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid rgb(24, 90, 189);
+}
+.delete__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > input {
+    font-size: 1rem;
+  }
+  > button {
+    border: none;
+    background: radial-gradient(
+      circle,
+      rgba(24, 90, 189, 1) 0%,
+      rgba(42, 137, 230, 1) 100%
+    );
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(24, 90, 189);
+  }
+}
+
+// Profile
+.user {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Loader
+.loading__component {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
